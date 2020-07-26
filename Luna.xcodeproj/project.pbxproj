@@ -3,19 +3,34 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89BCB32824CD7D6C0080D7A8 /* Meditate.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BCB32424CD7D6B0080D7A8 /* Meditate.json */; };
+		89BCB32924CD7D6C0080D7A8 /* Study.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BCB32524CD7D6C0080D7A8 /* Study.json */; };
+		89BCB32A24CD7D6C0080D7A8 /* Other.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BCB32624CD7D6C0080D7A8 /* Other.json */; };
+		89BCB32B24CD7D6C0080D7A8 /* Work.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BCB32724CD7D6C0080D7A8 /* Work.json */; };
 		89E751E624CD644000EAF28D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E751E524CD644000EAF28D /* AppDelegate.swift */; };
 		89E751E824CD644000EAF28D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E751E724CD644000EAF28D /* SceneDelegate.swift */; };
 		89E751EA24CD644000EAF28D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E751E924CD644000EAF28D /* ContentView.swift */; };
 		89E751EC24CD644400EAF28D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89E751EB24CD644400EAF28D /* Assets.xcassets */; };
 		89E751EF24CD644400EAF28D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 89E751EE24CD644400EAF28D /* Preview Assets.xcassets */; };
 		89E751F224CD644400EAF28D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 89E751F024CD644400EAF28D /* LaunchScreen.storyboard */; };
+		89E751FB24CD647800EAF28D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E751FA24CD647800EAF28D /* Constants.swift */; };
+		89E7520024CD65CC00EAF28D /* OnboardingStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89E751FF24CD65CC00EAF28D /* OnboardingStepView.swift */; };
+		89F093E424CD6ECA00F04AE7 /* lottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F093E324CD6ECA00F04AE7 /* lottieView.swift */; };
+		89F093E624CD6FEF00F04AE7 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89F093E524CD6FEF00F04AE7 /* OnBoardingView.swift */; };
+		A1CF522AEE514BF78D744083 /* Pods_Luna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0FBDDEEDA2A3BE0A7DEBF7C /* Pods_Luna.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16F2FFD25CAC15FCE6BE68F9 /* Pods-Luna.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luna.debug.xcconfig"; path = "Target Support Files/Pods-Luna/Pods-Luna.debug.xcconfig"; sourceTree = "<group>"; };
+		6C97EA90A324EC4A17C707ED /* Pods-Luna.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luna.release.xcconfig"; path = "Target Support Files/Pods-Luna/Pods-Luna.release.xcconfig"; sourceTree = "<group>"; };
+		89BCB32424CD7D6B0080D7A8 /* Meditate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Meditate.json; sourceTree = "<group>"; };
+		89BCB32524CD7D6C0080D7A8 /* Study.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Study.json; sourceTree = "<group>"; };
+		89BCB32624CD7D6C0080D7A8 /* Other.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Other.json; sourceTree = "<group>"; };
+		89BCB32724CD7D6C0080D7A8 /* Work.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Work.json; sourceTree = "<group>"; };
 		89E751E224CD644000EAF28D /* Luna.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Luna.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		89E751E524CD644000EAF28D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		89E751E724CD644000EAF28D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +39,11 @@
 		89E751EE24CD644400EAF28D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		89E751F124CD644400EAF28D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89E751F324CD644400EAF28D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89E751FA24CD647800EAF28D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		89E751FF24CD65CC00EAF28D /* OnboardingStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStepView.swift; sourceTree = "<group>"; };
+		89F093E324CD6ECA00F04AE7 /* lottieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lottieView.swift; sourceTree = "<group>"; };
+		89F093E524CD6FEF00F04AE7 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		B0FBDDEEDA2A3BE0A7DEBF7C /* Pods_Luna.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Luna.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1CF522AEE514BF78D744083 /* Pods_Luna.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D4E84CDE6BED38B7E31A722 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				16F2FFD25CAC15FCE6BE68F9 /* Pods-Luna.debug.xcconfig */,
+				6C97EA90A324EC4A17C707ED /* Pods-Luna.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6A96B827727A0DD6EAC66249 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B0FBDDEEDA2A3BE0A7DEBF7C /* Pods_Luna.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		89E751D924CD644000EAF28D = {
 			isa = PBXGroup;
 			children = (
 				89E751E424CD644000EAF28D /* Luna */,
 				89E751E324CD644000EAF28D /* Products */,
+				2D4E84CDE6BED38B7E31A722 /* Pods */,
+				6A96B827727A0DD6EAC66249 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,13 +96,16 @@
 		89E751E424CD644000EAF28D /* Luna */ = {
 			isa = PBXGroup;
 			children = (
+				89E751EB24CD644400EAF28D /* Assets.xcassets */,
 				89E751E524CD644000EAF28D /* AppDelegate.swift */,
 				89E751E724CD644000EAF28D /* SceneDelegate.swift */,
-				89E751E924CD644000EAF28D /* ContentView.swift */,
-				89E751EB24CD644400EAF28D /* Assets.xcassets */,
+				89E751FE24CD65B500EAF28D /* Onboarding files */,
+				89E751FC24CD648500EAF28D /* Model */,
+				89F093E724CD79DE00F04AE7 /* Controller */,
 				89E751F024CD644400EAF28D /* LaunchScreen.storyboard */,
-				89E751F324CD644400EAF28D /* Info.plist */,
+				89F093D824CD6E6900F04AE7 /* Lotties */,
 				89E751ED24CD644400EAF28D /* Preview Content */,
+				89E751F324CD644400EAF28D /* Info.plist */,
 			);
 			path = Luna;
 			sourceTree = "<group>";
@@ -75,6 +118,43 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		89E751FC24CD648500EAF28D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				89E751FA24CD647800EAF28D /* Constants.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		89E751FE24CD65B500EAF28D /* Onboarding files */ = {
+			isa = PBXGroup;
+			children = (
+				89E751FF24CD65CC00EAF28D /* OnboardingStepView.swift */,
+				89F093E524CD6FEF00F04AE7 /* OnBoardingView.swift */,
+			);
+			path = "Onboarding files";
+			sourceTree = "<group>";
+		};
+		89F093D824CD6E6900F04AE7 /* Lotties */ = {
+			isa = PBXGroup;
+			children = (
+				89F093E324CD6ECA00F04AE7 /* lottieView.swift */,
+				89BCB32424CD7D6B0080D7A8 /* Meditate.json */,
+				89BCB32624CD7D6C0080D7A8 /* Other.json */,
+				89BCB32524CD7D6C0080D7A8 /* Study.json */,
+				89BCB32724CD7D6C0080D7A8 /* Work.json */,
+			);
+			path = Lotties;
+			sourceTree = "<group>";
+		};
+		89F093E724CD79DE00F04AE7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				89E751E924CD644000EAF28D /* ContentView.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +162,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 89E751F624CD644400EAF28D /* Build configuration list for PBXNativeTarget "Luna" */;
 			buildPhases = (
+				6E4C7E5FD1E459B356549248 /* [CP] Check Pods Manifest.lock */,
 				89E751DE24CD644000EAF28D /* Sources */,
 				89E751DF24CD644000EAF28D /* Frameworks */,
 				89E751E024CD644000EAF28D /* Resources */,
+				8B94DD728DD4D92429AD894A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,12 +216,58 @@
 			buildActionMask = 2147483647;
 			files = (
 				89E751F224CD644400EAF28D /* LaunchScreen.storyboard in Resources */,
+				89BCB32924CD7D6C0080D7A8 /* Study.json in Resources */,
+				89BCB32B24CD7D6C0080D7A8 /* Work.json in Resources */,
+				89BCB32A24CD7D6C0080D7A8 /* Other.json in Resources */,
 				89E751EF24CD644400EAF28D /* Preview Assets.xcassets in Resources */,
+				89BCB32824CD7D6C0080D7A8 /* Meditate.json in Resources */,
 				89E751EC24CD644400EAF28D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6E4C7E5FD1E459B356549248 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Luna-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B94DD728DD4D92429AD894A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Luna/Pods-Luna-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Luna/Pods-Luna-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Luna/Pods-Luna-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		89E751DE24CD644000EAF28D /* Sources */ = {
@@ -148,7 +276,11 @@
 			files = (
 				89E751E624CD644000EAF28D /* AppDelegate.swift in Sources */,
 				89E751E824CD644000EAF28D /* SceneDelegate.swift in Sources */,
+				89F093E624CD6FEF00F04AE7 /* OnBoardingView.swift in Sources */,
+				89E7520024CD65CC00EAF28D /* OnboardingStepView.swift in Sources */,
+				89F093E424CD6ECA00F04AE7 /* lottieView.swift in Sources */,
 				89E751EA24CD644000EAF28D /* ContentView.swift in Sources */,
+				89E751FB24CD647800EAF28D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +414,7 @@
 		};
 		89E751F724CD644400EAF28D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16F2FFD25CAC15FCE6BE68F9 /* Pods-Luna.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -302,6 +435,7 @@
 		};
 		89E751F824CD644400EAF28D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C97EA90A324EC4A17C707ED /* Pods-Luna.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
