@@ -18,7 +18,7 @@ extension OnboardingDataModel {
     static var data: [OnboardingDataModel] = [
         OnboardingDataModel(image: "Study"),
         OnboardingDataModel(image: "Work"),
-        OnboardingDataModel(image: "Other"),
         OnboardingDataModel(image: "Meditate"),
+        OnboardingDataModel(image: "Other"),
     ]
 }

@@ -49,7 +49,7 @@ struct OnBoardingView: View {
                             .offset(x: CGFloat(i) * self.distance)
                             .offset(x: self.slideGesture.width - CGFloat(self.curSlideIndex) * self.distance)
                             //adjusting the animation
-                            .animation(Animation.interpolatingSpring(stiffness: 70, damping: 6).delay(0.1))
+                            .animation(Animation.interpolatingSpring(stiffness: 50, damping: 8).delay(0.1))
                             .gesture(DragGesture()
                                 .onChanged( { value in
                                     self.slideGesture = value.translation
