@@ -10,8 +10,10 @@ import SwiftUI
 
 struct OnBoardingView: View {
     
+    let defaults = UserDefaults.standard
     let name = ["Study", "Work", "Meditate", "Other"]
     var data: [OnboardingDataModel]
+    var model = Model()
     var doneFunction: () -> ()
     
     @State var slideGesture: CGSize = CGSize.zero
@@ -25,7 +27,7 @@ struct OnBoardingView: View {
     var body: some View {
         
         ZStack {
-            Color(.white)
+            Color(UIColor(red: 0.87, green: 0.90, blue: 0.91, alpha: 1.00))
                 .edgesIgnoringSafeArea(.all)
             
             VStack {
@@ -78,11 +80,23 @@ struct OnBoardingView: View {
                 self.progressView()
                     .padding(.bottom, 130).padding(.top)
                 Spacer()
-                Button(action: nextButton) {
+                Button(action: {
+                    self.nextButton()
+                    self.defaults.set(self.name[self.curSlideIndex], forKey: self.model.animationImage)
+                } ) {
                     self.arrowView()
                 }
+                
+                //Always skip this page button
+                Button(action: {
+                    self.defaults.set(true, forKey: self.model.skipOnBoarding)
+                    self.nextButton()
+                }) {
+                    Text("Always skip the this page")
+                    .foregroundColor(.black)
+                }
             }
-            .padding(20)
+           
         }
         
     }
@@ -92,7 +106,7 @@ struct OnBoardingView: View {
         Group {
             Capsule()
                 .frame(width: 230, height: 60, alignment: .center)
-                .foregroundColor(.green)
+                .foregroundColor(Color(red: 0.21, green: 0.58, blue: 0.57))
                 .overlay( Text(name[curSlideIndex])
                     .foregroundColor(.white)
                     .font(.system(size : 20))

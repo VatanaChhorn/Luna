@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		892B690E24D04A3B002ECBA0 /* mainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B690D24D04A3B002ECBA0 /* mainController.swift */; };
+		892B691124D04A81002ECBA0 /* AlertX in Frameworks */ = {isa = PBXBuildFile; productRef = 892B691024D04A81002ECBA0 /* AlertX */; };
 		89BCB32824CD7D6C0080D7A8 /* Meditate.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BCB32424CD7D6B0080D7A8 /* Meditate.json */; };
 		89BCB32924CD7D6C0080D7A8 /* Study.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BCB32524CD7D6C0080D7A8 /* Study.json */; };
 		89BCB32A24CD7D6C0080D7A8 /* Other.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BCB32624CD7D6C0080D7A8 /* Other.json */; };
@@ -27,6 +29,7 @@
 /* Begin PBXFileReference section */
 		16F2FFD25CAC15FCE6BE68F9 /* Pods-Luna.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luna.debug.xcconfig"; path = "Target Support Files/Pods-Luna/Pods-Luna.debug.xcconfig"; sourceTree = "<group>"; };
 		6C97EA90A324EC4A17C707ED /* Pods-Luna.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luna.release.xcconfig"; path = "Target Support Files/Pods-Luna/Pods-Luna.release.xcconfig"; sourceTree = "<group>"; };
+		892B690D24D04A3B002ECBA0 /* mainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainController.swift; sourceTree = "<group>"; };
 		89BCB32424CD7D6B0080D7A8 /* Meditate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Meditate.json; sourceTree = "<group>"; };
 		89BCB32524CD7D6C0080D7A8 /* Study.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Study.json; sourceTree = "<group>"; };
 		89BCB32624CD7D6C0080D7A8 /* Other.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Other.json; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				892B691124D04A81002ECBA0 /* AlertX in Frameworks */,
 				A1CF522AEE514BF78D744083 /* Pods_Luna.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				89E751E924CD644000EAF28D /* ContentView.swift */,
+				892B690D24D04A3B002ECBA0 /* mainController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,6 +178,9 @@
 			dependencies = (
 			);
 			name = Luna;
+			packageProductDependencies = (
+				892B691024D04A81002ECBA0 /* AlertX */,
+			);
 			productName = Luna;
 			productReference = 89E751E224CD644000EAF28D /* Luna.app */;
 			productType = "com.apple.product-type.application";
@@ -201,6 +209,9 @@
 				Base,
 			);
 			mainGroup = 89E751D924CD644000EAF28D;
+			packageReferences = (
+				892B690F24D04A81002ECBA0 /* XCRemoteSwiftPackageReference "AlertX" */,
+			);
 			productRefGroup = 89E751E324CD644000EAF28D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -274,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				892B690E24D04A3B002ECBA0 /* mainController.swift in Sources */,
 				89E751E624CD644000EAF28D /* AppDelegate.swift in Sources */,
 				89E751E824CD644000EAF28D /* SceneDelegate.swift in Sources */,
 				89F093E624CD6FEF00F04AE7 /* OnBoardingView.swift in Sources */,
@@ -476,6 +488,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		892B690F24D04A81002ECBA0 /* XCRemoteSwiftPackageReference "AlertX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/neel-makhecha/AlertX.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		892B691024D04A81002ECBA0 /* AlertX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 892B690F24D04A81002ECBA0 /* XCRemoteSwiftPackageReference "AlertX" */;
+			productName = AlertX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 89E751DA24CD644000EAF28D /* Project object */;
 }

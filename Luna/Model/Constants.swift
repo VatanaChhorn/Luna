@@ -22,3 +22,8 @@ extension OnboardingDataModel {
         OnboardingDataModel(image: "Other"),
     ]
 }
+
+struct Model {
+    let skipOnBoarding = "SkipOnBoarding"
+    let animationImage = "AnimationImage"
+}
