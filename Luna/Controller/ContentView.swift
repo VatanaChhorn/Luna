@@ -23,15 +23,12 @@ struct ContentView: View {
                 OnBoardingView(data: data, doneFunction: {
                     ///Update State
                     self.onboardingDone = true
-                    // Plish path
-                    var path: [AnyObject] = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true) as [AnyObject]
-                      let folder: String = path[0] as! String
-                      NSLog("Your NSUserDefaults are stored in this folder: %@/Preferences", folder)
-                    //
+                 
                 })
             } else {
                 //MARK: - Main Screen
                 mainController()
+                
             }
         }
     }

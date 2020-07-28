@@ -26,4 +26,5 @@ extension OnboardingDataModel {
 struct Model {
     let skipOnBoarding = "SkipOnBoarding"
     let animationImage = "AnimationImage"
+    
 }

@@ -83,6 +83,7 @@ struct OnBoardingView: View {
                 Button(action: {
                     self.nextButton()
                     self.defaults.set(self.name[self.curSlideIndex], forKey: self.model.animationImage)
+                    self.defaults.set(false, forKey: self.model.skipOnBoarding)
                 } ) {
                     self.arrowView()
                 }

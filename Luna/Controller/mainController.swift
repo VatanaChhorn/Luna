@@ -106,7 +106,7 @@ struct mainController: View {
                     } else {
                         Text("Stop glancing at me and do the work.")
                             .foregroundColor(.black)
-                            .padding(.top)
+                            .padding(.top, 30)
                         
                     }
                     
@@ -142,10 +142,8 @@ struct mainController: View {
                     }
                     //MARK: - Start Button
                     
-                    Button(action: {
-                        
+                    Button(action: {   
                         self.sliderVisibility = !self.sliderVisibility
-                        
                         
                     }) {
                         Capsule()
