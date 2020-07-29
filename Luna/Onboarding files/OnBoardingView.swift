@@ -93,8 +93,9 @@ struct OnBoardingView: View {
                     self.defaults.set(true, forKey: self.model.skipOnBoarding)
                     self.nextButton()
                 }) {
-                    Text("Always skip the this page")
+                    Text("Always skip this page")
                     .foregroundColor(.black)
+                        .padding(.top)
                 }
             }
            

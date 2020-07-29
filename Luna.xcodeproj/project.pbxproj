@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		892B690E24D04A3B002ECBA0 /* mainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892B690D24D04A3B002ECBA0 /* mainController.swift */; };
 		892B691124D04A81002ECBA0 /* AlertX in Frameworks */ = {isa = PBXBuildFile; productRef = 892B691024D04A81002ECBA0 /* AlertX */; };
+		894C581924D1501D00A22855 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C581824D1501D00A22855 /* TimerManager.swift */; };
+		894C581C24D1503900A22855 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C581B24D1503900A22855 /* ModalView.swift */; };
 		89BCB32824CD7D6C0080D7A8 /* Meditate.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BCB32424CD7D6B0080D7A8 /* Meditate.json */; };
 		89BCB32924CD7D6C0080D7A8 /* Study.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BCB32524CD7D6C0080D7A8 /* Study.json */; };
 		89BCB32A24CD7D6C0080D7A8 /* Other.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BCB32624CD7D6C0080D7A8 /* Other.json */; };
@@ -30,6 +32,8 @@
 		16F2FFD25CAC15FCE6BE68F9 /* Pods-Luna.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luna.debug.xcconfig"; path = "Target Support Files/Pods-Luna/Pods-Luna.debug.xcconfig"; sourceTree = "<group>"; };
 		6C97EA90A324EC4A17C707ED /* Pods-Luna.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Luna.release.xcconfig"; path = "Target Support Files/Pods-Luna/Pods-Luna.release.xcconfig"; sourceTree = "<group>"; };
 		892B690D24D04A3B002ECBA0 /* mainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainController.swift; sourceTree = "<group>"; };
+		894C581824D1501D00A22855 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		894C581B24D1503900A22855 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		89BCB32424CD7D6B0080D7A8 /* Meditate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Meditate.json; sourceTree = "<group>"; };
 		89BCB32524CD7D6C0080D7A8 /* Study.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Study.json; sourceTree = "<group>"; };
 		89BCB32624CD7D6C0080D7A8 /* Other.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Other.json; sourceTree = "<group>"; };
@@ -79,6 +83,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		894C581A24D1502100A22855 /* TimerManager */ = {
+			isa = PBXGroup;
+			children = (
+				894C581824D1501D00A22855 /* TimerManager.swift */,
+			);
+			path = TimerManager;
+			sourceTree = "<group>";
+		};
+		894C581D24D1504100A22855 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				89E751F024CD644400EAF28D /* LaunchScreen.storyboard */,
+				894C581B24D1503900A22855 /* ModalView.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		894C581E24D1504900A22855 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				89E751EB24CD644400EAF28D /* Assets.xcassets */,
+				89E751E524CD644000EAF28D /* AppDelegate.swift */,
+				89E751E724CD644000EAF28D /* SceneDelegate.swift */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
 		89E751D924CD644000EAF28D = {
 			isa = PBXGroup;
 			children = (
@@ -100,13 +131,12 @@
 		89E751E424CD644000EAF28D /* Luna */ = {
 			isa = PBXGroup;
 			children = (
-				89E751EB24CD644400EAF28D /* Assets.xcassets */,
-				89E751E524CD644000EAF28D /* AppDelegate.swift */,
-				89E751E724CD644000EAF28D /* SceneDelegate.swift */,
+				894C581E24D1504900A22855 /* Supporting files */,
+				894C581D24D1504100A22855 /* Modal */,
+				894C581A24D1502100A22855 /* TimerManager */,
 				89E751FE24CD65B500EAF28D /* Onboarding files */,
 				89E751FC24CD648500EAF28D /* Model */,
 				89F093E724CD79DE00F04AE7 /* Controller */,
-				89E751F024CD644400EAF28D /* LaunchScreen.storyboard */,
 				89F093D824CD6E6900F04AE7 /* Lotties */,
 				89E751ED24CD644400EAF28D /* Preview Content */,
 				89E751F324CD644400EAF28D /* Info.plist */,
@@ -289,8 +319,10 @@
 				89E751E624CD644000EAF28D /* AppDelegate.swift in Sources */,
 				89E751E824CD644000EAF28D /* SceneDelegate.swift in Sources */,
 				89F093E624CD6FEF00F04AE7 /* OnBoardingView.swift in Sources */,
+				894C581C24D1503900A22855 /* ModalView.swift in Sources */,
 				89E7520024CD65CC00EAF28D /* OnboardingStepView.swift in Sources */,
 				89F093E424CD6ECA00F04AE7 /* lottieView.swift in Sources */,
+				894C581924D1501D00A22855 /* TimerManager.swift in Sources */,
 				89E751EA24CD644000EAF28D /* ContentView.swift in Sources */,
 				89E751FB24CD647800EAF28D /* Constants.swift in Sources */,
 			);

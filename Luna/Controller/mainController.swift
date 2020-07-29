@@ -12,6 +12,7 @@ import Sliders
 
 struct mainController: View {
     
+    @ObservedObject var timerManger = TimerManager()
     @State var showingDetail = true
     @State var value3 = 10
     @State var sliderVisibility: Bool = true
@@ -29,16 +30,16 @@ struct mainController: View {
                 .edgesIgnoringSafeArea(.all)
             ZStack (alignment: .center ){
                 
-                if defaults.bool(forKey: model.skipOnBoarding) == false {
-                    LottieView(name:  defaults.string(forKey: model.animationImage)!)
-                        .frame(width: 400, height: 400, alignment: .center)
-                        .offset(y: -40)
-                } else {
-                    LottieView(name: name[Int.random(in: 0...2)])
-                        .frame(width: 400, height: 400, alignment: .center)
-                        .offset(y: -40)
-                    
-                }
+                //       if defaults.bool(forKey: model.skipOnBoarding) == false {
+                //            LottieView(name:  defaults.string(forKey: model.animationImage)!)
+                //                .frame(width: 400, height: 400, alignment: .center)
+                //                .offset(y: -40)
+                //        } else {
+                LottieView(name: name[Int.random(in: 0...2)])
+                    .frame(width: 400, height: 400, alignment: .center)
+                    .offset(y: -40)
+                
+                //            }
                 
                 VStack {
                     
@@ -66,7 +67,7 @@ struct mainController: View {
                             .alertX(isPresented: $showAlertSecond, content: {
                                 AlertX(title: Text("Disable Extreme Mode"),
                                        message: Text("Feel like giving up yet?"),
-                                       primaryButton: .default(Text("Disable"), action: {
+                                       primaryButton: .default(Text("Yes"), action: {
                                         self.extremeModeEnable.toggle()
                                         self.showAlertSecond.toggle()
                                        }),
@@ -84,7 +85,14 @@ struct mainController: View {
                                 .overlay(Image(systemName: "person")
                                     .foregroundColor(.white))
                         }
+                            //MARK: - Show Modal View
+                        .sheet(isPresented: $showModal) {
+                                               Modal()
+                                           }
+                        
+                        
                     } // End HStack
+                        .padding(.top)
                     
                     //MARK: - ExtremeMode Label Check
                     if extremeModeEnable {
@@ -100,7 +108,7 @@ struct mainController: View {
                             .foregroundColor(.black)
                             .bold()
                             .font(.largeTitle)
-                            .padding(.top , 20)
+                            .padding(.top , 15)
                         
                         
                     } else {
@@ -133,28 +141,29 @@ struct mainController: View {
                     }
                     
                     if !sliderVisibility {
-                        Text("\(value3): 00")
+                        Text("\(timerManger.outputResult)")
                             .foregroundColor(.black)
+                            .font(.system(size: 50))
                             .bold()
-                            .font(.largeTitle)
-                            .padding(.top , 35)
+                            .padding(.vertical , 35)
                             .padding(.horizontal, 100)
                     }
                     //MARK: - Start Button
                     
                     Button(action: {   
                         self.sliderVisibility = !self.sliderVisibility
-                        
+                        !self.sliderVisibility ? self.timerManger.timerMachine(minutes: self.value3) : self.timerManger.stopTimer()
                     }) {
                         Capsule()
                             .frame(width: 230, height: 60, alignment: .center)
                             .foregroundColor(extremeModeEnable ? .red: Color(red: 0.21, green: 0.58, blue: 0.57))
                             .font(.system(size : 20))
-                            .overlay(Text("Start")
-                                .foregroundColor(.white)
-                                .padding()
+                            .overlay(
+                                Text(sliderVisibility ? "Start" : "Give Up")
+                                    .foregroundColor(.white)
+                                    .padding()
                         )
-                    }
+                    } .padding(.bottom)
                     
                 }
             }
