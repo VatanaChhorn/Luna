@@ -12,7 +12,7 @@ class TimerManager: ObservableObject {
     
     @Published var outputResult: String = ""
     var timer = Timer()
-    
+    let model = Model()
     //MARK: - Convert input in minute to second - prepare for input to timerMachine
     
     func minuteToSecond(minute: Int) -> Int{
@@ -29,7 +29,11 @@ class TimerManager: ObservableObject {
         self.timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
             if secondsRemaining >= 0 {
                 self.outputResult = self.convertCountToTimeString(counter: secondsRemaining) //Output
+                //Set the push notification bool
+                UserDefaults.standard.set( true , forKey: self.model.processingBool)
                 secondsRemaining -= 1
+            } else {
+                self.timer.invalidate()
             }
         }
     }
@@ -39,6 +43,7 @@ class TimerManager: ObservableObject {
     func stopTimer() {
         timer.invalidate()
         outputResult = ""
+        UserDefaults.standard.set( false , forKey: self.model.processingBool)
     }
     
     //MARK: - Convert seconds input to time String

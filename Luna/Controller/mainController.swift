@@ -30,16 +30,16 @@ struct mainController: View {
                 .edgesIgnoringSafeArea(.all)
             ZStack (alignment: .center ){
                 
-                //       if defaults.bool(forKey: model.skipOnBoarding) == false {
-                //            LottieView(name:  defaults.string(forKey: model.animationImage)!)
-                //                .frame(width: 400, height: 400, alignment: .center)
-                //                .offset(y: -40)
-                //        } else {
-                LottieView(name: name[Int.random(in: 0...2)])
-                    .frame(width: 400, height: 400, alignment: .center)
-                    .offset(y: -40)
-                
-                //            }
+                if defaults.bool(forKey: model.skipOnBoarding) == false {
+                    LottieView(name:  defaults.string(forKey: model.animationImage)!)
+                        .frame(width: 400, height: 400, alignment: .center)
+                        .offset(y: -40)
+                } else {
+                    LottieView(name: name[Int.random(in: 0...2)])
+                        .frame(width: 400, height: 400, alignment: .center)
+                        .offset(y: -40)
+                    
+                }
                 
                 VStack {
                     
@@ -86,9 +86,9 @@ struct mainController: View {
                                     .foregroundColor(.white))
                         }
                             //MARK: - Show Modal View
-                        .sheet(isPresented: $showModal) {
-                                               Modal()
-                                           }
+                            .sheet(isPresented: $showModal) {
+                                Modal()
+                        }
                         
                         
                     } // End HStack
@@ -152,7 +152,9 @@ struct mainController: View {
                     
                     Button(action: {   
                         self.sliderVisibility = !self.sliderVisibility
+                        
                         !self.sliderVisibility ? self.timerManger.timerMachine(minutes: self.value3) : self.timerManger.stopTimer()
+                        
                     }) {
                         Capsule()
                             .frame(width: 230, height: 60, alignment: .center)

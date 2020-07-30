@@ -124,7 +124,7 @@ struct OnBoardingView: View {
                 Circle()
                     .scaledToFit()
                     .frame(width: 15, height: 10)
-                    .foregroundColor(self.curSlideIndex >= i+1 ? Color(.white) : Color(.black)
+                    .foregroundColor(self.curSlideIndex >= i ? Color(.white) : Color(.black)
                         .opacity(0.50))
             }
         }
