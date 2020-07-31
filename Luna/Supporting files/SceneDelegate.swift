@@ -102,8 +102,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         content.sound = UNNotificationSound.default
         
-        // set the time inverval to trigger the notification // 3 seconds from now
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 3, repeats: false)
+        // set the time inverval to trigger the notification // 2 seconds from now
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 2, repeats: false)
         
         // A request to schedule a local notification, which includes the content of the notification and the trigger conditions for delivery.
         let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)

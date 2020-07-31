@@ -14,7 +14,7 @@ struct mainController: View {
     
     @ObservedObject var timerManger = TimerManager()
     @State var showingDetail = true
-    @State var value3 = 10
+    @State var value3 = 60
     @State var sliderVisibility: Bool = true
     @State var showAlertX: Bool = false
     @State var showModal: Bool = false
@@ -97,7 +97,7 @@ struct mainController: View {
                     //MARK: - ExtremeMode Label Check
                     if extremeModeEnable {
                         Text("You're in Extreme Mode, Goodluck!")
-                            .padding(.top, 20)
+                            .padding(.top, 25)
                             .font(.headline)
                             .foregroundColor(.black)
                     }
@@ -108,13 +108,13 @@ struct mainController: View {
                             .foregroundColor(.black)
                             .bold()
                             .font(.largeTitle)
-                            .padding(.top , 15)
+                            .padding(.top , 50)
                         
                         
                     } else {
                         Text("Stop glancing at me and do the work.")
                             .foregroundColor(.black)
-                            .padding(.top, 30)
+                            .padding(.top, 40)
                         
                     }
                     
@@ -128,7 +128,7 @@ struct mainController: View {
                             .valueSliderStyle(
                                 HorizontalValueSliderStyle(
                                     track: LinearGradient(
-                                        gradient: Gradient( colors: [.blue, Color(red: 0.21, green: 0.58, blue: 0.57)]),
+                                        gradient: Gradient( colors: [ Color(red: 0.21, green: 0.58, blue: 0.57), .blue, Color(red: 0.21, green: 0.58, blue: 0.57)]),
                                         startPoint: .leading,
                                         endPoint: .trailing
                                     )
@@ -140,12 +140,12 @@ struct mainController: View {
                             .padding(.horizontal, 40).padding(.bottom, 40)
                     }
                     
+                    
                     if !sliderVisibility {
                         Text("\(timerManger.outputResult)")
                             .foregroundColor(.black)
-                            .font(.system(size: 50))
-                            .bold()
-                            .padding(.vertical , 35)
+                            .font(.system(size: 65))
+                            .padding(.vertical)
                             .padding(.horizontal, 100)
                     }
                     //MARK: - Start Button
@@ -154,6 +154,8 @@ struct mainController: View {
                         self.sliderVisibility = !self.sliderVisibility
                         
                         !self.sliderVisibility ? self.timerManger.timerMachine(minutes: self.value3) : self.timerManger.stopTimer()
+                        //Start dispatchQueue
+                        self.start(second: self.value3)
                         
                     }) {
                         Capsule()
@@ -172,10 +174,27 @@ struct mainController: View {
             
         }
     }
-}
-
-struct mainController_Previews: PreviewProvider {
-    static var previews: some View {
-        mainController()
+    
+    
+    //MARK: - DispatchQueue Function to showing new modal
+    func start(second: Int) {
+        
+        let work = DispatchWorkItem {
+            if !self.sliderVisibility {
+                self.showModal = true
+                   } else {
+                self.showModal = false
+                print("it works!")
+                       }
+        }
+        !self.sliderVisibility ? DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(second*60), execute: work) : work.cancel()
+        }
+        
     }
-}
+    
+    struct mainController_Previews: PreviewProvider {
+        static var previews: some View {
+            mainController()
+        }
+    }
+
