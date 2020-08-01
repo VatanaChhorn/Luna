@@ -11,6 +11,9 @@
 		892B691124D04A81002ECBA0 /* AlertX in Frameworks */ = {isa = PBXBuildFile; productRef = 892B691024D04A81002ECBA0 /* AlertX */; };
 		894C581924D1501D00A22855 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C581824D1501D00A22855 /* TimerManager.swift */; };
 		894C581C24D1503900A22855 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894C581B24D1503900A22855 /* ModalView.swift */; };
+		8956AB2C24D58CC400906F3C /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8956AB2B24D58CC400906F3C /* PopupView.swift */; };
+		8956AB2E24D58CF000906F3C /* Congrats.json in Resources */ = {isa = PBXBuildFile; fileRef = 8956AB2D24D58CF000906F3C /* Congrats.json */; };
+		89A5E58924D5358D004FF043 /* CongratsMedal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89A5E58824D5358D004FF043 /* CongratsMedal.swift */; };
 		89BCB32824CD7D6C0080D7A8 /* Meditate.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BCB32424CD7D6B0080D7A8 /* Meditate.json */; };
 		89BCB32924CD7D6C0080D7A8 /* Study.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BCB32524CD7D6C0080D7A8 /* Study.json */; };
 		89BCB32A24CD7D6C0080D7A8 /* Other.json in Resources */ = {isa = PBXBuildFile; fileRef = 89BCB32624CD7D6C0080D7A8 /* Other.json */; };
@@ -34,6 +37,9 @@
 		892B690D24D04A3B002ECBA0 /* mainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mainController.swift; sourceTree = "<group>"; };
 		894C581824D1501D00A22855 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 		894C581B24D1503900A22855 /* ModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		8956AB2B24D58CC400906F3C /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		8956AB2D24D58CF000906F3C /* Congrats.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Congrats.json; sourceTree = "<group>"; };
+		89A5E58824D5358D004FF043 /* CongratsMedal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsMedal.swift; sourceTree = "<group>"; };
 		89BCB32424CD7D6B0080D7A8 /* Meditate.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Meditate.json; sourceTree = "<group>"; };
 		89BCB32524CD7D6C0080D7A8 /* Study.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Study.json; sourceTree = "<group>"; };
 		89BCB32624CD7D6C0080D7A8 /* Other.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Other.json; sourceTree = "<group>"; };
@@ -96,6 +102,7 @@
 			children = (
 				89E751F024CD644400EAF28D /* LaunchScreen.storyboard */,
 				894C581B24D1503900A22855 /* ModalView.swift */,
+				89A5E58824D5358D004FF043 /* CongratsMedal.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -108,6 +115,14 @@
 				89E751E724CD644000EAF28D /* SceneDelegate.swift */,
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		8956AB2A24D58CAB00906F3C /* PopViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8956AB2B24D58CC400906F3C /* PopupView.swift */,
+			);
+			path = PopViewController;
 			sourceTree = "<group>";
 		};
 		89E751D924CD644000EAF28D = {
@@ -131,6 +146,7 @@
 		89E751E424CD644000EAF28D /* Luna */ = {
 			isa = PBXGroup;
 			children = (
+				8956AB2A24D58CAB00906F3C /* PopViewController */,
 				894C581E24D1504900A22855 /* Supporting files */,
 				894C581D24D1504100A22855 /* Modal */,
 				894C581A24D1502100A22855 /* TimerManager */,
@@ -174,6 +190,7 @@
 			children = (
 				89F093E324CD6ECA00F04AE7 /* lottieView.swift */,
 				89BCB32424CD7D6B0080D7A8 /* Meditate.json */,
+				8956AB2D24D58CF000906F3C /* Congrats.json */,
 				89BCB32624CD7D6C0080D7A8 /* Other.json */,
 				89BCB32524CD7D6C0080D7A8 /* Study.json */,
 				89BCB32724CD7D6C0080D7A8 /* Work.json */,
@@ -262,6 +279,7 @@
 				89BCB32A24CD7D6C0080D7A8 /* Other.json in Resources */,
 				89E751EF24CD644400EAF28D /* Preview Assets.xcassets in Resources */,
 				89BCB32824CD7D6C0080D7A8 /* Meditate.json in Resources */,
+				8956AB2E24D58CF000906F3C /* Congrats.json in Resources */,
 				89E751EC24CD644400EAF28D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,12 +335,14 @@
 			files = (
 				892B690E24D04A3B002ECBA0 /* mainController.swift in Sources */,
 				89E751E624CD644000EAF28D /* AppDelegate.swift in Sources */,
+				89A5E58924D5358D004FF043 /* CongratsMedal.swift in Sources */,
 				89E751E824CD644000EAF28D /* SceneDelegate.swift in Sources */,
 				89F093E624CD6FEF00F04AE7 /* OnBoardingView.swift in Sources */,
 				894C581C24D1503900A22855 /* ModalView.swift in Sources */,
 				89E7520024CD65CC00EAF28D /* OnboardingStepView.swift in Sources */,
 				89F093E424CD6ECA00F04AE7 /* lottieView.swift in Sources */,
 				894C581924D1501D00A22855 /* TimerManager.swift in Sources */,
+				8956AB2C24D58CC400906F3C /* PopupView.swift in Sources */,
 				89E751EA24CD644000EAF28D /* ContentView.swift in Sources */,
 				89E751FB24CD647800EAF28D /* Constants.swift in Sources */,
 			);

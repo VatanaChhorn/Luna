@@ -27,6 +27,7 @@ struct Model {
     let skipOnBoarding = "SkipOnBoarding"
     let animationImage = "AnimationImage"
     let processingBool = "ProcessingBool"
+    let congrats = "Congrats"
     
 }
 

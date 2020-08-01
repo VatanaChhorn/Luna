@@ -28,7 +28,6 @@ struct ContentView: View {
             } else {
                 //MARK: - Main Screen
                 mainController()
-                
             }
         }
     }

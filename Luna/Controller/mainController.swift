@@ -12,6 +12,7 @@ import Sliders
 
 struct mainController: View {
     
+    @State var showingPopup: Bool = false
     @ObservedObject var timerManger = TimerManager()
     @State var showingDetail = true
     @State var value3 = 60
@@ -168,6 +169,32 @@ struct mainController: View {
                                     .padding()
                         )
                     } .padding(.bottom)
+                        //MARK: - Pop Up View
+                        .popup(isPresented: $showingPopup,type: .default, position: .bottom, animation: .easeInOut) {
+                            VStack {
+                                
+                                Text("Congratulation! 🎉")
+                                    .bold()
+                                    .font(.system(size: 20))
+                                    .foregroundColor(.white)
+                                    .padding(.top, 120)
+                                    .padding(.bottom, 5)
+                                Text("You're one step closer toward your goal.")
+                                    .foregroundColor(.white)
+                                    .padding(.bottom, 3)
+                                Text("Keep up your great work. :)")
+                                    .foregroundColor(.white)
+                                LottieView(name: self.model.congrats)
+                                    .offset(y: -50)
+                                    .frame(width: 400, height: 400, alignment: .center)
+                                    .padding(.horizontal)
+                            }
+                            .frame(width: 380, height: 400)
+                            .background(Color(red: 0.21, green: 0.58, blue: 0.57))
+                            .cornerRadius(10)
+                            .shadow(radius: 10)
+                            .padding(.horizontal, 10)
+                    }
                     
                 }
             }
@@ -181,20 +208,20 @@ struct mainController: View {
         
         let work = DispatchWorkItem {
             if !self.sliderVisibility {
-                self.showModal = true
-                   } else {
-                self.showModal = false
+                self.showingPopup = true
+            } else {
+                self.showingPopup = false
                 print("it works!")
-                       }
+            }
         }
-        !self.sliderVisibility ? DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(second*60), execute: work) : work.cancel()
-        }
-        
+        !self.sliderVisibility ? DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(second*60+1), execute: work) : work.cancel()
     }
     
-    struct mainController_Previews: PreviewProvider {
-        static var previews: some View {
-            mainController()
-        }
+}
+
+struct mainController_Previews: PreviewProvider {
+    static var previews: some View {
+        mainController()
     }
+}
 
