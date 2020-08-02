@@ -22,7 +22,7 @@
 
 ### Language and Pods 
 
-- This app is one hundred percent written in Swift ( SwiftUI ) 
+- This app is written in Swift ( SwiftUI ) 
 - Using third party libraries such as AlertX, Sliders, Lotties, and PopupView. 
 
 ### Connect with me: :octocat:
