@@ -47,6 +47,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         print("sceneDidBecomeActive")
         
         UserDefaults.standard.set(false, forKey: self.model.processingBool)
+        UserDefaults.standard.set(false, forKey: self.model.extremeMode)
              print("ProcessBool when app become Active : \(UserDefaults.standard.bool(forKey: self.model.processingBool))")
     }
     
@@ -118,6 +119,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
         } else {
             print("User haven't started the timer.")
+        }
+        
+        //MARK: - Check Extreme Mode
+        
+        if defaults.bool(forKey: self.model.extremeMode) {
+            exit(-1)
         }
         
     }

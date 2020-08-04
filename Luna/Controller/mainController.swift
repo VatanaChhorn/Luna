@@ -58,10 +58,11 @@ struct mainController: View {
                                     .foregroundColor(.white))
                         } .alertX(isPresented: $showAlertX, content: {
                             AlertX(title: Text("Enable Extreme Mode"),
-                                   message: Text("You will automatically lose if you exit the app."),
+                                   message: Text("The app will automatically be terminated if you exit the app with Extreme Mode On!"),
                                    primaryButton: .default(Text("Enable"), action: {
                                     self.extremeModeEnable.toggle()
                                     self.showAlertX.toggle()
+                                    self.defaults.set(true, forKey: self.model.extremeMode)
                                    }),
                                    secondaryButton: .cancel(),
                                    theme: .mint(withTransparency: true, roundedCorners: true), animation: .classicEffect())})
@@ -71,6 +72,7 @@ struct mainController: View {
                                        primaryButton: .default(Text("Yes"), action: {
                                         self.extremeModeEnable.toggle()
                                         self.showAlertSecond.toggle()
+                                        self.defaults.set(false, forKey: self.model.extremeMode)
                                        }),
                                        secondaryButton: .cancel(),
                                        theme: .mint(withTransparency: true, roundedCorners: true), animation: .classicEffect())})
@@ -125,6 +127,8 @@ struct mainController: View {
                     
                     //MARK: - Slider
                     if sliderVisibility {
+                        Text("Get in to work now!")
+                            .multilineTextAlignment(.center)
                         ValueSlider(value: $value3, in: 10...120)
                             .valueSliderStyle(
                                 HorizontalValueSliderStyle(
