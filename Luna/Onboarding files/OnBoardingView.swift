@@ -48,6 +48,7 @@ struct OnBoardingView: View {
                     
                     ForEach(0 ..< data.count) { i in
                         OnboardingStepView(data: self.data[i])
+                            .padding(.top, 75)
                             .offset(x: CGFloat(i) * self.distance)
                             .offset(x: self.slideGesture.width - CGFloat(self.curSlideIndex) * self.distance)
                             //adjusting the animation

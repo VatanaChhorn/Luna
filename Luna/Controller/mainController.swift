@@ -111,13 +111,13 @@ struct mainController: View {
                             .foregroundColor(.black)
                             .bold()
                             .font(.largeTitle)
-                            .padding(.top , 50)
+                            .padding(.top , 45)
                         
                         
                     } else {
                         Text("Stop glancing at me and do the work.")
                             .foregroundColor(.black)
-                            .padding(.top, 40)
+                            .padding(.top, 60)
                         
                     }
                     
@@ -133,16 +133,17 @@ struct mainController: View {
                             .valueSliderStyle(
                                 HorizontalValueSliderStyle(
                                     track: LinearGradient(
-                                        gradient: Gradient( colors: [ Color(red: 0.21, green: 0.58, blue: 0.57), .blue, Color(red: 0.21, green: 0.58, blue: 0.57)]),
+                                        gradient: extremeModeEnable ? Gradient( colors: [ .red, Color(red: 0.21, green: 0.58, blue: 0.57), .red]) : Gradient( colors: [ Color(red: 0.21, green: 0.58, blue: 0.57), .blue, Color(red: 0.21, green: 0.58, blue: 0.57)]),
                                         startPoint: .leading,
                                         endPoint: .trailing
                                     )
                                         .frame(height: 10)
                                         .cornerRadius(4)
+                                        .padding(.horizontal)
                                 )
                                 
                         ) .frame( height: 20, alignment: .center)
-                            .padding(.horizontal, 40).padding(.bottom, 40)
+                            .padding(.horizontal, 40).padding(.vertical)
                     }
                     
                     
@@ -172,7 +173,7 @@ struct mainController: View {
                                     .foregroundColor(.white)
                                     .padding()
                         )
-                    } .padding(.bottom)
+                    } .padding()
                         //MARK: - Pop Up View
                         .popup(isPresented: $showingPopup,type: .default, position: .bottom, animation: .easeInOut) {
                             VStack {
