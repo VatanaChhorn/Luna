@@ -16,9 +16,9 @@
 
 ### Things that still working on
 
-- Updating extreme mode function
-- Fix some typo in the app 
-- Rearrange the layers of UI Design. 
+- [x] Updating extreme mode function
+- [x] Fix some typo in the app 
+- [x] Rearrange the layers of UI Design. 
 
 ### Language and Pods 
 
